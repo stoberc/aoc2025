@@ -7,16 +7,13 @@ def parse_line(line):
 data = [parse_line(line) for line in open(FNAME).read().split(',')]
 
 # split a string into the first half and the second half
+# will return an uneven split for odd-lengthed strings, but that's harmless
 def halves(i):
-    assert type(i) == type("adsf")
-    assert len(i) % 2 == 0
     return i[:len(i)//2], i[len(i)//2:]
     
 # checks if an int id is valid
 def is_valid(i):
     i = str(i)
-    if len(i) % 2 == 1:
-        return True
     j, k = halves(i)
     if j == k:
         return False
