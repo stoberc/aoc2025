@@ -1,4 +1,4 @@
-from aoc_utils import *
+from aoc_utils import transpose
 from math import prod
 
 FNAME = "in6.txt"
